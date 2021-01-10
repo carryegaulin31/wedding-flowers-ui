@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --format codeframe --ext jsx ."
+    "lint": "./node_modules/.bin/eslint --format codeframe --ext jsx .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
