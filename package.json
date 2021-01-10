@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/carryegaulin31/wedding-flowers-ui#readme",
   "dependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
