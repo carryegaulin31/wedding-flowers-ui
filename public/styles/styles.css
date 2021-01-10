@@ -1,0 +1,16 @@
+.page {
+  margin: 60px auto 0;
+  text-align: center;
+  width: 60%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
