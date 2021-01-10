@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --progress --inline --config webpack.dev.js",
+    "dev": "./node_modules/.bin/webpack --progress --config webpack.dev.js",
     "lint": "./node_modules/.bin/eslint --format codeframe --ext jsx ."
   },
   "repository": {
