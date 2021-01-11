@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize'
-import allConfigs from '../configs/sequelize'
+import allConfigs from '../config/sequelize'
 import ColorsModel from './colors'
 import FlowersModel from './flowers'
 import SeasonsModel from './seasons'
