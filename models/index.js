@@ -27,5 +27,6 @@ export default {
   Seasons,
   Flowers,
   FlowersColors,
+  Op: Sequelize.Op,
   Sequelize,
 }

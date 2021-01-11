@@ -1,8 +1,19 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 export default () => {
   const [name, setName] = useState('')
+  const [flower, setFlowerList] = useState([])
 
+  useEffect(() => {
+    async function pullData() {
+      const { data } = await axios.get('http://localhost:1337/api/flowers')
+
+      setFlowerList(data)
+    }
+
+    pullData()
+  }, [])
   return (
     <div className="page">
       <div className="title">Wedding Flowers UI</div>
