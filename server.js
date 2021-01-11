@@ -10,7 +10,7 @@ const app = express()
 app.use(express.static('public'))
 
 app.get('/api/seasons', getAllSeasons)
-app.get('/api/seasons/:name', getSeasonByName)
+app.get('/api/seasons/:season', getSeasonByName)
 
 app.get('/api/colors', getAllColors)
 app.get('/api/colors/:name', getColorByNameOrId)

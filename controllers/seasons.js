@@ -7,19 +7,22 @@ export const getAllSeasons = async (request, response) => {
 }
 
 export const getSeasonByName = async (request, response) => {
-  const { id } = request.params
+  const { season } = request.params
 
-  const season = await models.Seasons.findOne({
+  const seasonName = await models.Seasons.findOne({
     where: {
       [models.Sequelize.Op.or]: [
-        { id },
-        { season: { [models.Sequelize.Op.like]: `%${id}%` } },
+        { season },
+        { season: { [models.Sequelize.Op.like]: `%${season}%` } },
       ],
     },
-    include: [{ model: models.Flowers }],
+    include: [{
+      model: models.Flowers,
+      include: [{ model: models.Colors }],
+    }],
   })
 
-  return season
-    ? response.send(season)
+  return seasonName
+    ? response.send(seasonName)
     : response.sendStatus(404)
 }
