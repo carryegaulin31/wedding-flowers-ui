@@ -22,5 +22,5 @@ export default {
   Seasons,
   Flowers,
   FlowersColors,
-  Sequelize
+  Sequelize,
 }

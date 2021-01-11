@@ -1,4 +1,3 @@
-import { response } from 'express'
 import models from '../models'
 
 export const getAllColors = async (request, response) => {
@@ -12,7 +11,7 @@ export const getColorById = async (request, response) => {
 
   const color = await models.Colors.findOne({
     where: { id },
-    include: [{ model: models.Flowers }]
+    include: [{ model: models.Flowers }],
   })
 
   return color
