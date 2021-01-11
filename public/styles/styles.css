@@ -1,5 +1,5 @@
 body {
-  background-color: darkorchid;
+  background-color: thistle;
 }
 
 .page {
@@ -12,10 +12,13 @@ body {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 20px;
+  font-style: italic;
+  color:hotpink;
 }
 
 .subtitle {
   font-size: 20px;
+  color: honeydew;
 }
 
 input {
@@ -24,11 +27,13 @@ input {
   padding: 5px;
   margin: 20px 0;
   outline: none;
-  background-color: gainsboro ;
+  background-color: linen ;
 }
 
 .color {
   font-size: 20px;
   margin-bottom: 10px;
+  font-style: italic;
+  color: mediumaquamarine;
 }
 
