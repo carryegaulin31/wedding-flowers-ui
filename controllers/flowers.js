@@ -9,21 +9,25 @@ export const getAllFlowers = async (request, response) => {
 }
 
 export const getFlowerByName = async (request, response) => {
-  const { name } = request.params
+  try {
+    const { name } = request.params
 
-  const flower = await models.Flowers.findOne({
-    where: {
-      [models.Sequelize.Op.or]: [
-        { name },
-        { name: { [models.Sequelize.Op.like]: `%${name}%` } },
-      ],
-    },
-    include: [{ model: models.Colors }, { model: models.Seasons }],
-  })
+    const flower = await models.Flowers.findOne({
+      where: {
+        [models.Sequelize.Op.or]: [
+          { name },
+          { name: { [models.Sequelize.Op.like]: `%${name}%` } },
+        ],
+      },
+      include: [{ model: models.Colors }, { model: models.Seasons }],
+    })
 
-  return flower
-    ? response.send(flower)
-    : response.sendStatus(404)
+    return flower
+      ? response.send(flower)
+      : response.sendStatus(404)
+  } catch (error) {
+    return response.status(500).send('Unable to retrieve hero, please try again')
+  }
 }
 
 export const saveNewFlower = async (request, response) => {
@@ -37,7 +41,8 @@ export const saveNewFlower = async (request, response) => {
     }
 
     const newFlower = await models.heroes.create({
-      name })
+      name
+    })
 
     return response.status(201).send(newFlower)
   } catch (error) {

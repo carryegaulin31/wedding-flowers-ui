@@ -7,21 +7,25 @@ export const getAllColors = async (request, response) => {
 }
 
 export const getColorByName = async (request, response) => {
-  const { name } = request.params
+  try {
+    const { name } = request.params
 
-  const color = await models.Colors.findOne({
-    where: {
-      [models.Sequelize.Op.or]: [
+    const color = await models.Colors.findOne({
+      where: {
+        [models.Sequelize.Op.or]: [
 
-        { name: { [models.Sequelize.Op.like]: `%${name}%` } },
-      ],
-    },
-    include: [{
-      model: models.Flowers
-    }],
-  })
+          { name: { [models.Sequelize.Op.like]: `%${name}%` } },
+        ],
+      },
+      include: [{
+        model: models.Flowers
+      }],
+    })
 
-  return color
-    ? response.send(color)
-    : response.sendStatus(404)
+    return color
+      ? response.send(color)
+      : response.sendStatus(404)
+  } catch (error) {
+    return response.status(500).send('Unable to retrieve hero, please try again')
+  }
 }
