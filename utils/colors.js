@@ -1,11 +1,11 @@
-import axios from 'axios'
+import fetchColors from '../actions/colors'
 
 export const filterColors = (list, term) => list.filter(color => (
   color.name.toLowerCase().includes(term.toLowerCase())
 ))
 
-export const retrieveColors = asyn() => {
-  const { data } = await axios.get('http://localhost:1337/api/colors')
+export const retrieveColors = async () => {
+  const colors = await fetchColors()
 
-  return data
+  return colors
 }

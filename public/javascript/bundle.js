@@ -305,6 +305,17 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
+/***/ "./actions/colors.js":
+/*!***************************!*\
+  !*** ./actions/colors.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\n  const {\n    data\n  } = await axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:1337/api/colors');\n  return data;\n});\n\n//# sourceURL=webpack://wedding-flowers-ui/./actions/colors.js?");
+
+/***/ }),
+
 /***/ "./client.jsx":
 /*!********************!*\
   !*** ./client.jsx ***!
@@ -334,7 +345,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Color */ \"./components/Color.jsx\");\n/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Search */ \"./components/Search.jsx\");\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\n  const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');\n  const [colorList, setColorList] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);\n  const [filteredColorList, setFilteredColorList] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);\n  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {\n    async function pullData() {\n      const {\n        data\n      } = await axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:1337/api/colors');\n      setColorList(data);\n      setFilteredColorList(data);\n    }\n\n    pullData();\n  }, []);\n  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {\n    const filtered = colorList.filter(color => color.name.toLowerCase().includes(searchTerm.toLowerCase()));\n    setFilteredColorList(filtered);\n  }, [searchTerm]);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"page\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"title\"\n  }, \"Wedding Flowers UI\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(\"div\", {\n    className: \"subtitle\"\n  }, \"A searchable list of flowers by color to make your wedding perfect\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Search__WEBPACK_IMPORTED_MODULE_3__.default, {\n    term: searchTerm,\n    setter: setSearchTerm\n  }), filteredColorList.map(color => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Color__WEBPACK_IMPORTED_MODULE_2__.default, {\n    key: color.id,\n    id: color.id,\n    name: color.name\n  })));\n});\n\n//# sourceURL=webpack://wedding-flowers-ui/./components/Colors.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Color */ \"./components/Color.jsx\");\n/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Search */ \"./components/Search.jsx\");\n/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/colors */ \"./utils/colors.js\");\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\n  const [searchTerm, setSearchTerm] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');\n  const [colorList, setColorList] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);\n  const [filteredColorList, setFilteredColorList] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\n    async function pullData() {\n      const colors = await _utils_colors__WEBPACK_IMPORTED_MODULE_3__.retrieveColors;\n      setColorList(colors);\n      setFilteredColorList(colors);\n    }\n\n    pullData();\n  }, []);\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\n    const filtered = (0,_utils_colors__WEBPACK_IMPORTED_MODULE_3__.filterColors)(colorList, searchTerm);\n    setFilteredColorList(filtered);\n  }, [searchTerm]);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"page\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"title\"\n  }, \"Wedding Flowers UI\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"subtitle\"\n  }, \"A searchable list of flowers by color to make your wedding perfect\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Search__WEBPACK_IMPORTED_MODULE_2__.default, {\n    term: searchTerm,\n    setter: setSearchTerm\n  }), filteredColorList.map(color => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Color__WEBPACK_IMPORTED_MODULE_1__.default, {\n    key: color.id,\n    id: color.id,\n    name: color.name\n  })));\n});\n\n//# sourceURL=webpack://wedding-flowers-ui/./components/Colors.jsx?");
 
 /***/ }),
 
@@ -346,6 +357,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({\n  term,\n  setter\n}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n  type: \"text\",\n  name: \"search\",\n  value: term,\n  onChange: event => setter(event.target.value)\n}));\n\n//# sourceURL=webpack://wedding-flowers-ui/./components/Search.jsx?");
+
+/***/ }),
+
+/***/ "./utils/colors.js":
+/*!*************************!*\
+  !*** ./utils/colors.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"filterColors\": () => /* binding */ filterColors,\n/* harmony export */   \"retrieveColors\": () => /* binding */ retrieveColors\n/* harmony export */ });\n/* harmony import */ var _actions_colors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/colors */ \"./actions/colors.js\");\n\nconst filterColors = (list, term) => list.filter(color => color.name.toLowerCase().includes(term.toLowerCase()));\nconst retrieveColors = async () => {\n  const colors = await (0,_actions_colors__WEBPACK_IMPORTED_MODULE_0__.default)();\n  return colors;\n};\n\n//# sourceURL=webpack://wedding-flowers-ui/./utils/colors.js?");
 
 /***/ }),
 
