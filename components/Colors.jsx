@@ -1,6 +1,7 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Color from './Color'
 import Search from './Search'
+import Color from './Color'
 import { filterColors, retrieveColors } from '../utils/colors'
 
 export default () => {
@@ -9,7 +10,7 @@ export default () => {
   const [filteredColorList, setFilteredColorList] = useState([])
   useEffect(() => {
     async function pullData() {
-      const colors = await retrieveColors
+      const colors = await retrieveColors()
 
       setColorList(colors)
       setFilteredColorList(colors)
