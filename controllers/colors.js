@@ -6,12 +6,17 @@ export const getAllColors = async (request, response) => {
   return response.send(colors)
 }
 
-export const getColorById = async (request, response) => {
+export const getColorByNameOrId = async (request, response) => {
   const { id } = request.params
 
   const color = await models.Colors.findOne({
-    where: { id },
-    include: [{ model: models.Flowers }],
+    where: {
+      [models.Sequelize.Op.or]: [
+        { id },
+        { name: { [models.Sequelize.Op.like]: `%${id}%` } },
+      ],
+    },
+    include: [{ model: models.Flowers }, { model: models.Seasons }],
   })
 
   return color
