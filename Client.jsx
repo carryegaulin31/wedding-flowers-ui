@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Flowers from './components/Flowers'
+import Colors from './components/Colors'
 
 render(
-  <Flowers />,
+  <Colors />,
   document.getElementById('root'),
 )
