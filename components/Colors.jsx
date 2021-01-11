@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Color from './Color'
+import Search from './Search'
 
 export default () => {
   const [name, setName] = useState('')
@@ -19,7 +20,7 @@ export default () => {
     <div className="page">
       <div className="title">Wedding Flowers UI</div>
       <div className="subtitle">A searchable list of flowers by color to make your wedding perfect</div>
-      <input type="text" name="search" onChange={event => setName(event.target.value)} />
+      <Search term={name} setter={setName} />
       {
         colorList.map(color => (<Color key={color.id} id={color.id} name={color.name} />))
       }
