@@ -18,7 +18,7 @@ export default () => {
   return (
     <div className="page">
       <div className="title">Wedding Flowers UI</div>
-      <div className="subtitle">A searchable list of flowers to make your wedding perfect</div>
+      <div className="subtitle">A searchable list of flowers by color to make your wedding perfect</div>
       <input type="text" name="search" onChange={event => setName(event.target.value)} />
       {
         colorList.map(color => (<Color key={color.id} id={color.id} name={color.name} />))
