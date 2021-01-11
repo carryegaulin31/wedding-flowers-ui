@@ -1,21 +1,61 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+    await queryInterface.createTable('seasons', {
+      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
+      season: { type: Sequelize.STRING, allowNull: false },
+      note: { type: Sequelize.STRING },
+      createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+      },
+      deletedAt: { type: Sequelize.DATE },
+    })
+
+    await queryInterface.createTable('colors', {
+      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
+      name: { type: Sequelize.STRING, allowNull: false },
+      createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+      },
+      deletedAt: { type: Sequelize.DATE },
+    })
+
+    await queryInterface.createTable('flowers', {
+      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
+      name: { type: Sequelize.STRING, allowNull: false },
+      seasonId: { type: Sequelize.INTEGER, references: { model: 'seasons', key: 'id' } },
+      createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+      },
+      deletedAt: { type: Sequelize.DATE },
+    })
+
+    return queryInterface.createTable('flowersColors', {
+      genreId: { type: Sequelize.INTEGER, references: { model: 'colors', key: 'id' } },
+      novelId: { type: Sequelize.INTEGER, references: { model: 'flowers', key: 'id' } },
+      createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+      },
+      deletedAt: { type: Sequelize.DATE },
+    })
   },
 
-  down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
-  }
-};
+  down: async (queryInterface) => {
+    await queryInterface.dropTable('flowersColors')
+    await queryInterface.dropTable('flowers')
+    await queryInterface.dropTable('colors')
+
+    return queryInterface.dropTable('seasons')
+  },
+}
