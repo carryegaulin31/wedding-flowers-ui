@@ -8,7 +8,7 @@ export const getAllFlowers = async (request, response) => {
   return response.send(flowers)
 }
 
-export const getFlowerByNameOrId = async (request, response) => {
+export const getFlowerByName = async (request, response) => {
   const { name } = request.params
 
   const flower = await models.Flowers.findOne({

@@ -1,8 +1,8 @@
 import express from 'express'
 // import bodyParser from 'body-parser'
 import path from 'path'
-import { getAllColors, getColorByNameOrId } from './controllers/colors'
-import { getAllFlowers, getFlowerByNameOrId } from './controllers/flowers'
+import { getAllColors, getColorByName } from './controllers/colors'
+import { getAllFlowers, getFlowerByName } from './controllers/flowers'
 import { getAllSeasons, getSeasonByName } from './controllers/seasons'
 
 const app = express()
@@ -13,10 +13,10 @@ app.get('/api/seasons', getAllSeasons)
 app.get('/api/seasons/:season', getSeasonByName)
 
 app.get('/api/colors', getAllColors)
-app.get('/api/colors/:name', getColorByNameOrId)
+app.get('/api/colors/:name', getColorByName)
 
 app.get('/api/flowers', getAllFlowers)
-app.get('/api/flowers/:name', getFlowerByNameOrId)
+app.get('/api/flowers/:name', getFlowerByName)
 
 app.all('*', (request, response) => response.sendFile(path.resolve(__dirname, 'public', 'index.html')))
 
