@@ -1,7 +1,7 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Color from './Color'
 import Search from './Search'
+import { filterColors, retrieveColors } from '../utils/colors'
 
 export default () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -9,19 +9,17 @@ export default () => {
   const [filteredColorList, setFilteredColorList] = useState([])
   useEffect(() => {
     async function pullData() {
-      const { data } = await axios.get('http://localhost:1337/api/colors')
+      const colors = await retrieveColors
 
-      setColorList(data)
-      setFilteredColorList(data)
+      setColorList(colors)
+      setFilteredColorList(colors)
     }
 
     pullData()
   }, [])
 
   useEffect(() => {
-    const filtered = colorList.filter(color => (
-      color.name.toLowerCase().includes(searchTerm.toLowerCase())
-    ))
+    const filtered = filterColors(colorList, searchTerm)
 
     setFilteredColorList(filtered)
   }, [searchTerm])
