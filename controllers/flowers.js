@@ -9,13 +9,13 @@ export const getAllFlowers = async (request, response) => {
 }
 
 export const getFlowerByNameOrId = async (request, response) => {
-  const { id } = request.params
+  const { name } = request.params
 
   const flower = await models.Flowers.findOne({
     where: {
       [models.Sequelize.Op.or]: [
-        { id },
-        { name: { [models.Sequelize.Op.like]: `%${id}%` } },
+        { name },
+        { name: { [models.Sequelize.Op.like]: `%${name}%` } },
       ],
     },
     include: [{ model: models.Colors }, { model: models.Seasons }],
