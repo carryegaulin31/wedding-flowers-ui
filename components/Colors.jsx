@@ -19,7 +19,11 @@ export default () => {
   }, [])
 
   useEffect(() => {
+    const filtered = colorList.filter(color => (
+      color.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ))
 
+    setFilteredColorList(filtered)
   }, [searchTerm])
 
   return (
