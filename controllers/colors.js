@@ -16,9 +16,9 @@ export const getColorByName = async (request, response) => {
         { name: { [models.Sequelize.Op.like]: `%${name}%` } },
       ],
     },
-    /* include: [{
-  model: models.Flowers
-}], */
+    include: [{
+      model: models.Flowers
+    }],
   })
 
   return color
