@@ -17,6 +17,11 @@ const Seasons = SeasonsModel(connection, Sequelize)
 const Flowers = FlowersModel(connection, Sequelize, Seasons)
 const FlowersColors = FlowersColorsModel(connection, Sequelize, Colors, Flowers)
 
+Flowers.belongsTo(Seasons)
+Seasons.hasMany(Flowers)
+Colors.belongsToMany(Flowers, { through: FlowersColors })
+Flowers.belongsToMany(Colors, { through: FlowersColors })
+
 export default {
   Colors,
   Seasons,

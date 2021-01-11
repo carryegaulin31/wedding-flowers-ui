@@ -3,6 +3,6 @@ import { render } from 'react-dom'
 import Flowers from './components/Flowers'
 
 render(
-  <div>Flowers</div>,
+  <Flowers />,
   document.getElementById('root'),
 )

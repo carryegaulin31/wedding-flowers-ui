@@ -1,4 +1,3 @@
-import { response } from 'express'
 import models from '../models'
 
 export const getAllFlowers = async (request, response) => {
@@ -9,7 +8,7 @@ export const getAllFlowers = async (request, response) => {
   return response.send(flowers)
 }
 
-export const getFlowerByNameOrId = async (request, respond) => {
+export const getFlowerByNameOrId = async (request, response) => {
   const { id } = request.params
 
   const flower = await models.Flowers.findOne({
