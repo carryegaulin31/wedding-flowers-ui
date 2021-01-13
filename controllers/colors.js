@@ -1,8 +1,9 @@
 import models from '../models'
 
 export const getAllColors = async (request, response) => {
-  const colors = await models.Colors.findAll()
-
+  const colors = await models.Colors.findAll({
+    include: [{ model: models.Flowers }],
+  })
   return response.send(colors)
 }
 
@@ -18,7 +19,7 @@ export const getColorByName = async (request, response) => {
         ],
       },
       include: [{
-        model: models.Flowers
+        model: models.Flowers,
       }],
     })
 

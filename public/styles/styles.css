@@ -1,5 +1,5 @@
 body {
-  background-color: thistle;
+  background-color: floralwhite;
 }
 
 .page {
@@ -18,7 +18,8 @@ body {
 
 .subtitle {
   font-size: 20px;
-  color: honeydew;
+  color: orchid;
+  font-style: italic;
 }
 
 input {
@@ -27,7 +28,7 @@ input {
   padding: 5px;
   margin: 20px 0;
   outline: none;
-  background-color: linen ;
+  background-color: lightpink ;
 }
 
 .color {

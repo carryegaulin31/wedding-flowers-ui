@@ -27,7 +27,7 @@ export default () => {
 
   return (
     <div className="page">
-      <div className="title">Wedding Flowers UI</div>
+      <div className="title">Wedding Flowers Source</div>
       <div className="subtitle">A searchable list of flowers by color to make your wedding perfect</div>
       <Search term={searchTerm} setter={setSearchTerm} />
       {

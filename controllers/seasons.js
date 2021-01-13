@@ -1,8 +1,9 @@
 import models from '../models'
 
 export const getAllSeasons = async (request, response) => {
-  const seasons = await models.Seasons.findAll()
-
+  const seasons = await models.Seasons.findAll({
+  include: [{ model: models.Flowers }],
+})
   return response.send(seasons)
 }
 
