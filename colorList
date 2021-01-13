@@ -1,6 +1,7 @@
 INSERT INTO colors (name) VALUES ("Antique Lavender");
 INSERT INTO colors (name) VALUES ("Antique Pink");
 INSERT INTO colors (name) VALUES ("Apple Green");
+INSERT INTO colors (name) VALUES ("Assorted");
 INSERT INTO colors (name) VALUES ("Beige/Lavender");
 INSERT INTO colors (name) VALUES ("Beige/Pink");
 INSERT INTO colors (name) VALUES ("Black");
@@ -20,6 +21,7 @@ INSERT INTO colors (name) VALUES ("Burgundy/White");
 INSERT INTO colors (name) VALUES ("Burgundy/Yellow");
 INSERT INTO colors (name) VALUES ("Butterscotch");
 INSERT INTO colors (name) VALUES ("Champagne");
+INSERT INTO colors (name) VALUES ("Chocolate);
 INSERT INTO colors (name) VALUES ("Copper");
 INSERT INTO colors (name) VALUES ("Coral");
 INSERT INTO colors (name) VALUES ("Cream");
