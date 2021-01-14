@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Flower from '../components/Flower'
 import Page from '../components/Page'
 import ColorDetails from '../components/ColorDetails'
 import Title from '../components/Title'
@@ -26,7 +27,19 @@ export default ({ location }) => {
       <Title />
       {
         colorName
-          ? (<ColorDetails name={color.name} />)
+          ? (
+            <>
+              <ColorDetails name={color.name} />
+              {flowerList.map(flower => (
+                <Flower
+                  key={flower.id}
+                  id={flower.id}
+                  name={flower.name}
+                  seasonId={flower.seasonId}
+                />
+              ))}
+            </>
+          )
           : (<div>Sorry beautiful, I do not knpw that color</div>)
       }
     </Page>
