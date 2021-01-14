@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import GoBack from '../components/GoBack'
 import Flower from '../components/Flower'
 import NotFound from '../components/NotFound'
 import Page from '../components/Page'
@@ -26,6 +27,7 @@ export default ({ location }) => {
   return (
     <Page>
       <Title />
+      <GoBack />
       {
         colorName
           ? (
