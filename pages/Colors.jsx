@@ -27,12 +27,12 @@ export default () => {
   }, [searchTerm])
 
   return (
-    <div className="page">
+    <Page>
       <Title />
       <Search term={searchTerm} setter={setSearchTerm} />
       {
         filteredColorList.map(color => (<Color key={color.id} id={color.id} name={color.name} />))
       }
-    </div>
+    </Page>
   )
 }
