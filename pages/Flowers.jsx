@@ -43,7 +43,7 @@ export default ({ location }) => {
               ))}
             </>
           )
-          : (<NotFound message="Sorry beautiful, I do not knpw that color" />)
+          : (<NotFound message="Sorry beautiful, I do not know that color" />)
       }
     </Page>
   )
