@@ -23,6 +23,11 @@ export default ({ location }) => {
   return (
     <Page>
       <Title />
+      {
+        colorName
+          ? (<div>{color.name}</div>)
+          : (<div>Sorry gorgeous, I do not knpw that color</div>)
+      }
     </Page>
   )
 }
