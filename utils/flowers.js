@@ -1,3 +1,5 @@
+import fetchFlowersForColors from '../actions/flowers'
+
 export const getColorNameFromUrl = location => (location && location.pathname
   ? location.pathname.split('/heroes/').pop()
   : ''
