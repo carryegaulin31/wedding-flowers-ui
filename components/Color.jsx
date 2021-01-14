@@ -6,8 +6,11 @@ const Team = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
 `
+const Link = styled(NavLink)`
+  text-decoration: none;
+`
 export default ({ id, name }) => (
   <Team key={id}>
-    <NavLink to={`/colors/${id}`}>{`${name}`}</NavLink>
+    <Link to={`/colors/${id}`}>{`${name}`}</Link>
   </Team>
 )
