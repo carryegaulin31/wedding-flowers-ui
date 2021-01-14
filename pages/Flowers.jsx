@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Page from '../components/Page'
 import Title from '../components/Title'
 
-export default () => {
+export default ({ location }) => {
   const [colorName, setColorName] = useState('')
   const [color, setColor] = useState({})
   const [flowerList, setFlowerList] = useState([])
 
   useEffect(() => {
     async function pullData() {
-      const { details, flowers } = await retrieveFlowers()
+      const { details, flowers } = await retrieveFlowers(location)
 
       setColorName(details.name)
       setColor(details)
