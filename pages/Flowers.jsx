@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Page from '../components/Page'
+import ColorDetails from '../components/ColorDetails'
 import Title from '../components/Title'
 import { retrieveFlowers } from '../utils/flowers'
 
@@ -25,8 +26,8 @@ export default ({ location }) => {
       <Title />
       {
         colorName
-          ? (<div>{color.name}</div>)
-          : (<div>Sorry gorgeous, I do not knpw that color</div>)
+          ? (<ColorDetails name={color.name} />)
+          : (<div>Sorry beautiful, I do not knpw that color</div>)
       }
     </Page>
   )
