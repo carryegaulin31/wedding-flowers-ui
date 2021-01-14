@@ -6,6 +6,7 @@ const Page = styled.div`
   margin: 60px auto 0;
   text-align: center;
   width: 60%;
+  background-color: floralwhite;
 `
 
 export default ({ children }) => (

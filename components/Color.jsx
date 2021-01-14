@@ -10,6 +10,7 @@ color: mediumaquamarine;
 `
 const Link = styled(NavLink)`
   text-decoration: none;
+  color: mediumaquamarine;
 `
 export default ({ id, name }) => (
   <Color key={id}>
