@@ -12,7 +12,7 @@ export const getFlowerByName = async (request, response) => {
   try {
     const { name } = request.params
 
-    const flower = await models.Flowers.findOne({
+    const flower = await models.Flowers.findAll({
       where: {
         [models.Sequelize.Op.or]: [
           { name },

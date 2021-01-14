@@ -11,7 +11,7 @@ export const getColorByName = async (request, response) => {
   try {
     const { name } = request.params
 
-    const color = await models.Colors.findOne({
+    const color = await models.Colors.findAll({
       where: {
         [models.Sequelize.Op.or]: [
 

@@ -11,7 +11,7 @@ export const getSeasonByName = async (request, response) => {
   try {
     const { season } = request.params
 
-    const seasonName = await models.Seasons.findOne({
+    const seasonName = await models.Seasons.findAll({
       where: {
         [models.Sequelize.Op.or]: [
           { season },
