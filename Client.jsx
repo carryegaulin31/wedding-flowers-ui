@@ -9,7 +9,8 @@ import ColorsPage from './pages/Colors'
 render(
   <BrowserRouter>
     <Switch>
-      <Route exact path="/flowers" component={FlowersPage} />
+      <Route path="/flowers" component={FlowersPage} />
+      <Route exact path="/colors" component={ColorsPage} />
       <Route path="*" component={ErrorPage} />
     </Switch>
   </BrowserRouter>,
