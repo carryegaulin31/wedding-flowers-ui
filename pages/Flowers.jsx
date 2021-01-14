@@ -3,9 +3,21 @@ import Page from '../components/Page'
 import Title from '../components/Title'
 
 export default () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [colorList, setColorList] = useState({})
-  const [filteredColorList, setFilteredColorList] = useState([])
+  const [colorName, setColorName] = useState('')
+  const [color, setColor] = useState({})
+  const [flowerList, setFlowerList] = useState([])
+
+  useEffect(() => {
+    async function pullData() {
+      const { details, flowers } = await retrieveFlowers()
+
+      setColorName(details.name)
+      setColor(details)
+      setFlowerList(flowers)
+    }
+
+    pullData()
+  }, [])
 
   return (
     <Page>
