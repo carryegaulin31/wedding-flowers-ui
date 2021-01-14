@@ -7,6 +7,7 @@ render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={ColorsPage} />
+      <Route path="*" component={ErrorPage} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root'),
