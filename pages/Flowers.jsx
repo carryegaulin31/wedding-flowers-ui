@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Flower from '../components/Flower'
+import NotFound from '../components/NotFound'
 import Page from '../components/Page'
 import ColorDetails from '../components/ColorDetails'
 import Title from '../components/Title'
@@ -40,7 +41,7 @@ export default ({ location }) => {
               ))}
             </>
           )
-          : (<div>Sorry beautiful, I do not knpw that color</div>)
+          : (<NotFound message="Sorry beautiful, I do not knpw that color" />)
       }
     </Page>
   )

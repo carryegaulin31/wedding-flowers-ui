@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Search from '../components/Search'
+import Page from '../components/Page'
 import Color from '../components/Color'
 import Title from '../components/Title'
 
