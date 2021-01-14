@@ -158,10 +158,18 @@ module.exports = {
     ])
 
     await queryInterface.bulkInsert('seasons', [
-      { season: 'summer', note: '' },
-      { season: 'fall', note: '' },
-      { season: 'winter', note: '' },
       { season: 'spring', note: '' },
+      { season: 'spring/summer', note: '' },
+      { season: 'spring/summer/fall', note: '' },
+      { season: 'summer', note: '' },
+      { season: 'summer/fall', note: '' },
+      { season: 'summer/fall/winter', note: '' },
+      { season: 'fall', note: '' },
+      { season: 'fall/winter', note: '' },
+      { season: 'fall/winter/spring', note: '' },
+      { season: 'winter', note: '' },
+      { season: 'winter/spring', note: '' },
+      { season: 'winter/spring/summer', note: ''},
       { season: 'yearRound', note: '' },
     ])
 
@@ -169,8 +177,8 @@ module.exports = {
       { name: 'Acacia Cultiflormis', seasonId: 5 },
       { name: 'Agonis', seasonId: 5 },
       { name: 'Alstroemeria', seasonId: 2 },
-      { name: 'Amaranthus', seasonId:	1, 2 },
-      { name: 'Amaranthus', seasonId:	1,2
+      { name: 'Amaranthus', seasonId:	1 },
+      { name: 'Amaranthus', seasonId:	2
       { name: 'Amaranthus', seasonId:	1,2
       { name: 'Amaranthus', seasonId:	1,2
       { name: 'Anemone', seasonId:	2,4
@@ -368,7 +376,6 @@ module.exports = {
     ])
 
     return queryInterface.bulkInsert('flowersColors', [
-      { flowerId: 1, colorId: 52 },
       { flowerId: 1, colorId: 53 },
       { flowerId: 2, colorId: 18 },
       { flowerId: 3, colorId: 4 },
