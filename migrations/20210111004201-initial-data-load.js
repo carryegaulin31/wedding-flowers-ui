@@ -167,6 +167,204 @@ module.exports = {
 
     await queryInterface.bulkInsert('flowers', [
       { name: 'Acacia Cultiflormis', seasonId: 5 },
+      { name: 'Agonis', seasonId: 5 },
+      { name: 'Alstroemeria', seasonId: 2 },
+      { name: 'Amaranthus', seasonId:	1, 2 },
+      { name: 'Amaranthus', seasonId:	1,2
+      { name: 'Amaranthus', seasonId:	1,2
+      { name: 'Amaranthus', seasonId:	1,2
+      { name: 'Anemone', seasonId:	2,4
+      { name: 'Anemone', seasonId:	2,4
+      { name: 'Anemone', seasonId:	2,4
+      { name: 'Anemone', seasonId:	2,4
+      { name: 'Artichoke', seasonId: Baby	1,4
+      { name: 'Artichoke', seasonId: Baby	1,4
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Matsumoto', seasonId:	1
+      { name: 'Aster Montecasino', seasonId:	1
+      { name: 'Aster Montecasino', seasonId:	1
+      { name: 'Bells Of Ireland', seasonId:	1,4
+      { name: 'Bupleurum', seasonId:	1,2
+      { name: 'Carnation Fancy', seasonId:	5
+      { name: 'Carnation Fancy', seasonId:	5
+      { name: 'Carnation Fancy', seasonId:	5
+      { name: 'Carnation Mini', seasonId:	5
+      { name: 'Chamomile', seasonId: 	5
+      { name: 'China Mum', seasonId:	1,2,4
+      { name: 'China Mum', seasonId:	1,2,4
+      { name: 'China Mum', seasonId: 	1,2,4
+      { name: 'Cornflower', seasonId:	4
+      { name: 'Craspedia', seasonId:	1,4
+      { name: 'Cremone', seasonId:	3
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidium', seasonId:	1,3,4
+      { name: 'Cymbidiums', seasonId:	1,3,4
+      { name: 'Dahlia', seasonId:	1, 4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Dahlia', seasonId:	1,4
+      { name: 'Cosmos Chocolate', seasonId:	1,2
+      { name: 'Cosmos Chocolate', seasonId:	1,2
+      { name: 'Delph Belladonna 60cm', seasonId:	4
+      { name: 'Delph Belladonna 60cm', seasonId:	4
+      { name: 'Delph Belladonna 70cm', seasonId:	4
+      { name: 'Delph Belladonna 70cm', seasonId:	4
+      { name: 'Delph Belladonna 80cm', seasonId:	4
+      { name: 'Delph', seasonId:	4
+      { name: 'Delph', seasonId:	4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Delph-Hybrid', seasonId:	1,4
+      { name: 'Dianthus Gypsy', seasonId:	1
+      { name: 'Dianthus Gypsy', seasonId:	1
+      { name: 'Dianthus Gypsy', seasonId:	1
+      { name: 'Dianthus Gypsy', seasonId:	1
+      { name: 'Dianthus Gypsy', seasonId:	1
+      { name: 'Dianthus', seasonId:	1
+      { name: 'Eryngium', seasonId:	1,2
+      { name: 'Fuji/spider', seasonId: 	1,4
+      { name: 'Garden Roses', seasonId: 	1,4
+      { name: 'Gardenia', seasonId: 	1,4
+      { name: 'Gardenia', seasonId: 	1,4
+      { name: 'Genestra', seasonId:	1
+      { name: 'Genestra', seasonId:	1
+      { name: 'Gerber', seasonId:	3
+      { name: 'Gerber Gerrondo', seasonId:	2,3
+      { name: 'Gerber Mini', seasonId:	2,3
+      { name: 'Gladiolas', seasonId:	1,2
+      { name: 'Green Mist', seasonId:	1,2,4
+      { name: 'Gypsophila', seasonId:	1,2,4
+      { name: 'Gypsophila', seasonId:	1,2,4
+      { name: 'Heather', seasonId:	1,4
+      { name: 'Heather', seasonId:	1,4
+      { name: 'Heleborus', seasonId: 	3,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea', seasonId:	1,4
+      { name: 'Hydrangea Local', seasonId:	1,4
+      { name: 'Hydrangea Local', seasonId:	1,4
+      { name: 'Hypericum 70cm', seasonId:	1,2
+      { name: 'Kale Clover', seasonId:	5
+      { name: 'Kale Mini Frilly', seasonId:	5
+      { name: 'Kale Mini Frilly', seasonId:	5
+      { name: 'Kale Mini', seasonId: 	5
+      { name: 'Kale Mini', seasonId:	5
+      { name: 'Kale Mini', seasonId:	5
+      { name: 'Kale Rosette', seasonId:	5
+      { name: 'Kale Rosette', seasonId:	5
+      { name: 'Kale Rosette', seasonId:	5
+      { name: 'Kale Ruffled', seasonId:	5
+      { name: 'Kale Frilly', seasonId:	5
+      { name: 'Kale Frilly', seasonId:	5
+      { name: 'Kale Large', seasonId:	5
+      { name: 'Kale Large', seasonId:	5
+      { name: 'Kale Toy Lacey', seasonId:	5
+      { name: 'Kale Toy Lacey', seasonId:	5
+      { name: 'Kochia', seasonId:	5
+      { name: 'Larkspur', seasonId:	1,4
+      { name: 'Lily Asiatic', seasonId:	2,3
+      { name: 'Lily Oriental', seasonId:	4
+      { name: 'Lily Oriental', seasonId:	4
+      { name: 'Lily Oriental', seasonId:	4
+      { name: 'Limonium', seasonId:	1,4
+      { name: 'Lisanthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Lisianthus', seasonId:	1,4
+      { name: 'Narcisuss', seasonId:	3,4
+      { name: 'Narcisuss', seasonId:	3,4
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Orchid', seasonId:	5
+      { name: 'Phlox', seasonId:	3,4
+      { name: 'Pompon', seasonId:	4
+      { name: 'Protea', seasonId: 	5
+      { name: 'Protea', seasonId:	5
+      { name: 'Queen Annes Lace', seasonId:	2,3
+      { name: 'Queen Annes Lace', seasonId:	2,3
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Ranunculus Elegance', seasonId:	4
+      { name: 'Rannunclus', seasonId:	4
+      { name: 'Ranuncules Local Hybrid', seasonId:	4
+      { name: 'Ranunculus Clooney', seasonId:	4
+      { name: 'Ranunculus Clooney', seasonId:	4
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Rose', seasonId:	5
+      { name: 'Scabiosa Scoop', seasonId:	1,2
+      { name: 'Scabiosa Scoop', seasonId:	1,2
+      { name: 'Scabiosa Scoop', seasonId:	1,2
+      { name: 'Scabiosa', seasonId:	1,2
+      { name: 'Snapdragon', seasonId:	2,3,4
+      { name: 'Solidago', seasonId: 	2,4
+      { name: 'Solidago Import', seasonId:	2,4
+      { name: 'Spray Rose', seasonId:	5
+      { name: 'Spray Rose Garden', seasonId:	5
+      { name: 'Spray Roses 40/50 Cm', seasonId:	5
+      { name: 'Statice Sinuata', seasonId:	5
+      { name: 'Statica Sinuata', seasonId:	5
+      { name: 'Statice Sinuata', seasonId:	5
+      { name: 'Statice Sinuata', seasonId:	5
+      { name: 'Statice Sinuata', seasonId:	5
+      { name: 'Stock', seasonId:	4
+      { name: 'Statice Sinuata', seasonId:	4
+      { name: 'Statice Sinuata', seasonId:	4
+      { name: 'Statice Sinuata', seasonId:	4
+      { name: 'Sunflower Mini', seasonId:	2,3
+      { name: 'Sunflower', seasonId: 	2,3
+      { name: 'Sweet peas', seasonId: 	4
+      { name: 'Tulip', seasonId: 	4
+      { name: 'Tulip', seasonId: 	4
+      { name: 'Tulip', seasonId: 	4
+      { name: 'Tulip', seasonId: 	4
+      { name: 'Tweedia', seasonId:	1,2
+      { name: 'Tweedia', seasonId:	1,2
+      { name: 'Veronica', seasonId:	1,2,4
+      { name: 'Veronica', seasonId:	1,2,4
+      { name: 'Viburnum Tinus', seasonId:	5
+      { name: 'Wax Hybrid', seasonId:	4
+      { name: 'Wax Hybrid', seasonId:	4
+      { name: 'Wax Hybrid', seasonId:	4
+      { name: 'Wax Regular', seasonId:	4
+      { name: 'Wax Regular', seasonId:	4
+      { name: 'Wax Regular', seasonId:	4
     ])
 
     return queryInterface.bulkInsert('flowersColors', [
