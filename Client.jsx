@@ -6,7 +6,7 @@ import Colors from './components/Colors'
 render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={Colors} />
+      <Route exact path="/" component={Colors} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root'),
