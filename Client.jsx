@@ -10,7 +10,7 @@ render(
   <BrowserRouter>
     <Switch>
       <Route path="/flowers" component={FlowersPage} />
-      <Route exact path="/colors" component={ColorsPage} />
+      <Route exact path="/" component={ColorsPage} />
       <Route path="*" component={ErrorPage} />
     </Switch>
   </BrowserRouter>,
