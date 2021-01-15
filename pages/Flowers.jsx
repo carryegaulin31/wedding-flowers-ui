@@ -38,7 +38,6 @@ export default ({ location }) => {
                   key={flower.id}
                   id={flower.id}
                   name={flower.name}
-                  seasonId={flower.seasonId}
                 />
               ))}
             </>

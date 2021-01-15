@@ -7,8 +7,8 @@ const Flower = styled.div`
   text-align: center;
 `
 
-export default ({ id, name, seasonId }) => (
+export default ({ id, name }) => (
   <Flower key={id}>
-    {`${name} (${seasonId})`}
+    {`${name}`}
   </Flower>
 )
