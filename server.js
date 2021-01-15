@@ -13,7 +13,7 @@ app.get('/api/seasons', getAllSeasons)
 app.get('/api/seasons/:season', getSeasonByName)
 
 app.get('/api/colors', getAllColors)
-app.get('/api/colors/:name', getColorByName)
+app.get('/api/colors/:id', getColorByName)
 
 app.get('/api/flowers', getAllFlowers)
 app.get('/api/flowers/:name', getFlowerByName)

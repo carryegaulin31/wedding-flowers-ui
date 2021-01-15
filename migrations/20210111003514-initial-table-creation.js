@@ -39,8 +39,8 @@ module.exports = {
     })
 
     return queryInterface.createTable('flowersColors', {
-      genreId: { type: Sequelize.INTEGER, references: { model: 'colors', key: 'id' } },
-      novelId: { type: Sequelize.INTEGER, references: { model: 'flowers', key: 'id' } },
+      colorId: { type: Sequelize.INTEGER, references: { model: 'colors', key: 'id' } },
+      flowerId: { type: Sequelize.INTEGER, references: { model: 'flowers', key: 'id' } },
       createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,

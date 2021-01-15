@@ -420,7 +420,6 @@ module.exports = {
       { flowerId: 44, colorId: 18 },
       { flowerId: 45, colorId: 115 },
       { flowerId: 46, colorId: 137 },
-      { flowerId: 46, colorId: 137 },
       { flowerId: 47, colorId: 17 },
       { flowerId: 48, colorId: 60 },
       { flowerId: 49, colorId: 90 },
@@ -572,8 +571,6 @@ module.exports = {
       { flowerId: 195, colorId: 99 },
       { flowerId: 196, colorId: 108 },
       { flowerId: 197, colorId: 137 },
-      { flowerId: 198, colorId: 99 },
-      { flowerId: 199, colorId: 108 },
     ])
   },
 

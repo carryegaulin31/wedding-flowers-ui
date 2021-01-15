@@ -15,11 +15,9 @@ font-size: 20px;
 color: orchid;
 font-style: italic;
 `
-
-
 export default () => (
   <>
     <Title>Wedding Flowers Source</Title>
-    <Subtitle>A searchable list of flowers by color to make your wedding perfect</Subtitle>
+    <Subtitle>A searchable list of flowers by color to make your wedding day exceptional</Subtitle>
   </>
 )
