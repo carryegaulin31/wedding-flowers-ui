@@ -5,7 +5,7 @@ import NotFound from '../components/NotFound'
 import Page from '../components/Page'
 import ColorDetails from '../components/ColorDetails'
 import Title from '../components/Title'
-import { retrieveFlowers } from '../utils/flowers'
+import { retrieveColorWithAssociatedFlowers } from '../utils/colors'
 
 export default ({ location }) => {
   const [colorName, setColorName] = useState('')
@@ -14,7 +14,7 @@ export default ({ location }) => {
 
   useEffect(() => {
     async function pullData() {
-      const { details, flowers } = await retrieveFlowers(location)
+      const { details, flowers } = await retrieveColorWithAssociatedFlowers(location)
 
       setColorName(details.name)
       setColor(details)

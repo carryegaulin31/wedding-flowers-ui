@@ -14,6 +14,6 @@ const Link = styled(NavLink)`
 `
 export default ({ id, name }) => (
   <Color key={id}>
-    <Link to={`/flowers/${id}`}>{`${name}`}</Link>
+    <Link to={`/colors/${id}`}>{`${name}`}</Link>
   </Color>
 )

@@ -32,16 +32,16 @@ export const getFlowerByName = async (request, response) => {
 
 export const saveNewFlower = async (request, response) => {
   try {
-    const { name } = request.body
+    const { name, seasonId } = request.body
 
-    if (!name) {
+    if (!name || !seasonId) {
       return response
         .status(400)
-        .send('The following fields are required: name')
+        .send('The following fields are required: name, seasonId')
     }
 
-    const newFlower = await models.heroes.create({
-      name
+    const newFlower = await models.Flowers.create({
+
     })
 
     return response.status(201).send(newFlower)
