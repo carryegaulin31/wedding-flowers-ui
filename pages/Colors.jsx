@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Page from '../components/Page'
 import Search from '../components/Search'
-import Color from '../components/Color'
+import ColorLink from '../components/NameLink'
 import Title from '../components/Title'
 
 import { filterColors, retrieveColors } from '../utils/colors'
@@ -32,7 +32,7 @@ export default () => {
       <Title />
       <Search term={searchTerm} setter={setSearchTerm} />
       {
-        filteredColorList.map(color => (<Color key={color.id} id={color.id} name={color.name} />))
+        filteredColorList.map(color => (<ColorLink key={color.id} id={color.id} name={color.name} path="colors" />))
       }
     </Page>
   )

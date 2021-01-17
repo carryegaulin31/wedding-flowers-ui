@@ -12,8 +12,8 @@ const Link = styled(NavLink)`
   text-decoration: none;
   color: mediumaquamarine;
 `
-export default ({ id, name }) => (
+export default ({ id, name, path }) => (
   <Color key={id}>
-    <Link to={`/colors/${id}`}>{`${name}`}</Link>
+    <Link to={`/${path}/${id}`}>{`${name}` }</Link>
   </Color>
 )

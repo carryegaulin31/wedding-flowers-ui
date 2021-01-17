@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import GoBack from '../components/GoBack'
-import Flower from '../components/Flower'
+import Flower from '../components/FlowerNameLink'
 import NotFound from '../components/NotFound'
 import Page from '../components/Page'
-import ColorDetails from '../components/ColorDetails'
+import Name from '../components/ColorName'
 import Title from '../components/Title'
 import { retrieveColorWithAssociatedFlowers } from '../utils/colors'
 
@@ -32,7 +32,7 @@ export default ({ location }) => {
         colorName
           ? (
             <>
-              <ColorDetails name={color.name} />
+              <Name name={color.name} />
               {flowerList.map(flower => (
                 <Flower
                   key={flower.id}
