@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import GoBack from '../components/GoBack'
-import Flower from '../components/FlowerNameLink'
+import Flower from '../components/NameLink'
 import NotFound from '../components/NotFound'
 import Page from '../components/Page'
-import Name from '../components/ColorName'
+import Name from '../components/Name'
 import Title from '../components/Title'
 import { retrieveColorWithAssociatedFlowers } from '../utils/colors'
 
@@ -38,6 +38,7 @@ export default ({ location }) => {
                   key={flower.id}
                   id={flower.id}
                   name={flower.name}
+                  path="flowers"
                 />
               ))}
             </>

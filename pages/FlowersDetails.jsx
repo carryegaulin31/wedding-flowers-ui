@@ -5,3 +5,8 @@ import NotFound from '../components/NotFound'
 import Page from '../components/Page'
 import FlowersDetails from '../components/FlowerNameLink'
 import Title from '../components/Title'
+
+export default () => {
+  return (
+    <h1> Coming Soon</h1 >)
+}
