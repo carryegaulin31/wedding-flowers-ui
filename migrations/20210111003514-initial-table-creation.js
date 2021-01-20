@@ -3,7 +3,6 @@ module.exports = {
     await queryInterface.createTable('seasons', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       season: { type: Sequelize.STRING, allowNull: false },
-      note: { type: Sequelize.STRING },
       createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,
@@ -29,6 +28,7 @@ module.exports = {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       name: { type: Sequelize.STRING, allowNull: false },
       seasonId: { type: Sequelize.INTEGER, references: { model: 'seasons', key: 'id' } },
+      note: { type: Sequelize.STRING },
       createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,
