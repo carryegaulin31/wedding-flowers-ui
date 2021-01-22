@@ -28,7 +28,7 @@ module.exports = {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       name: { type: Sequelize.STRING, allowNull: false },
       seasonId: { type: Sequelize.INTEGER, references: { model: 'seasons', key: 'id' } },
-      note: { type: Sequelize.STRING },
+      slug: { type: Sequelize.STRING },
       createdAt: { type: Sequelize.DATE, allowNull: false, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
       updatedAt: {
         type: Sequelize.DATE,
