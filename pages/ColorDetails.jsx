@@ -27,12 +27,12 @@ export default ({ location }) => {
   return (
     <Page>
       <Title />
+      <Name name={color.name} />
       <GoBack />
       {
         colorName
           ? (
             <>
-              <Name name={color.name} />
               {flowerList.map(flower => (
                 <Flower
                   key={flower.id}
