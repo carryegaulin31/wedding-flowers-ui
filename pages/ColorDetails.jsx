@@ -38,6 +38,7 @@ export default ({ location }) => {
                   key={flower.id}
                   id={flower.id}
                   name={flower.name}
+                  slug={flower.slug}
                   path="flowers"
                 />
               ))}

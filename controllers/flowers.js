@@ -26,15 +26,15 @@ export const getFlowerByName = async (request, response) => {
       ? response.send(flower)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve hero, please try again')
+    return response.status(500).send('Unable to retrieve flower, please try again')
   }
 }
 
 export const saveNewFlower = async (request, response) => {
   try {
-    const { name, seasonId } = request.body
+    const { name, seasonId, slug } = request.body
 
-    if (!name || !seasonId) {
+    if (!name || !seasonId || !slug) {
       return response
         .status(400)
         .send('The following fields are required: name, seasonId')
