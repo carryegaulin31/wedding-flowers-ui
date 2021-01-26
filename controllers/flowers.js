@@ -37,7 +37,7 @@ export const saveNewFlower = async (request, response) => {
     if (!name || !seasonId || !slug) {
       return response
         .status(400)
-        .send('The following fields are required: name, seasonId')
+        .send('The following fields are required: name, seasonId, slug')
     }
 
     const newFlower = await models.Flowers.create({
@@ -47,5 +47,16 @@ export const saveNewFlower = async (request, response) => {
     return response.status(201).send(newFlower)
   } catch (error) {
     return response.status(500).send('Unable to save new flower, please try again')
+  }
+}
+
+export const deleteFlower = async (request, response) => {
+  try {
+    const { id } = request.params
+    await models.FlowersColors.destroy({ where: { id } })
+    await models.Flowers.destroy({ where: { id } })
+    return response.sendStatus(204)
+  } catch (error) {
+    return response.status(500).send('Unable to delete flower, please try again')
   }
 }
