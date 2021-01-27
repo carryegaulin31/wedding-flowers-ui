@@ -40,9 +40,7 @@ export const saveNewFlower = async (request, response) => {
         .send('The following fields are required: name, seasonId, slug')
     }
 
-    const newFlower = await models.Flowers.create({
-
-    })
+    const newFlower = await models.Flowers.create({ name, seasonId, slug })
 
     return response.status(201).send(newFlower)
   } catch (error) {
@@ -53,7 +51,7 @@ export const saveNewFlower = async (request, response) => {
 export const deleteFlower = async (request, response) => {
   try {
     const { id } = request.params
-    await models.FlowersColors.destroy({ where: { id } })
+    await models.Flowers.destroy({ where: { id } })
     await models.Flowers.destroy({ where: { id } })
     return response.sendStatus(204)
   } catch (error) {
