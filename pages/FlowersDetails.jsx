@@ -1,13 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const DetailsSoon = styled.div`
-  font-size: 60px;
-  font weight: 400;
-  text-align: center;
-  color: aquamarine;
-  `
+import Page from '../components/Page'
+import Title from '../components/Title'
+import GoBack from '../components/GoBack'
+import ComingSoon from '../components/ComingSoon'
 
 export default () => (
-  <DetailsSoon>Coming Soon</DetailsSoon>
+  <Page>
+    <Title />
+    <GoBack />
+    <ComingSoon />
+    <img src="../public/comingSoonPic.jpg" alt="lilac girl" />
+  </Page>
 )

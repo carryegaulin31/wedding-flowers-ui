@@ -404,6 +404,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./components/ComingSoon.jsx":
+/*!***********************************!*\
+  !*** ./components/ComingSoon.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nconst ComingSoon = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div.withConfig({\n  displayName: \"ComingSoon\",\n  componentId: \"sc-1t07mkw-0\"\n})([\"font-size:60px;font weight:400;text-align:center;color:aquamarine;font-style:italic;\"]);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ComingSoon, null, \"Coming Soon...\"));\n\n//# sourceURL=webpack://wedding-flowers-ui/./components/ComingSoon.jsx?");
+
+/***/ }),
+
 /***/ "./components/GoBack.jsx":
 /*!*******************************!*\
   !*** ./components/GoBack.jsx ***!
@@ -521,7 +532,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nconst DetailsSoon = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.div.withConfig({\n  displayName: \"FlowersDetails__DetailsSoon\",\n  componentId: \"sc-1imgv25-0\"\n})([\"font-size:60px;font weight:400;text-align:center;color:aquamarine;\"]);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DetailsSoon, null, \"Coming Soon\"));\n\n//# sourceURL=webpack://wedding-flowers-ui/./pages/FlowersDetails.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Page */ \"./components/Page.jsx\");\n/* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Title */ \"./components/Title.jsx\");\n/* harmony import */ var _components_GoBack__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/GoBack */ \"./components/GoBack.jsx\");\n/* harmony import */ var _components_ComingSoon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ComingSoon */ \"./components/ComingSoon.jsx\");\n\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Page__WEBPACK_IMPORTED_MODULE_1__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Title__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_GoBack__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ComingSoon__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n  src: \"../public/comingSoonPic.jpg\",\n  alt: \"lilac girl\"\n})));\n\n//# sourceURL=webpack://wedding-flowers-ui/./pages/FlowersDetails.jsx?");
 
 /***/ }),
 
