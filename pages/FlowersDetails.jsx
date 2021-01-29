@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import GoBack from '../components/GoBack'
-import Flower from '../components/FlowerNameLink'
-import NotFound from '../components/NotFound'
-import Page from '../components/Page'
-import FlowersDetails from '../components/FlowerNameLink'
-import Title from '../components/Title'
+import React from 'react'
+import styled from 'styled-components'
 
-export default () => {
-return (
-    <h1> Coming Soon</h1 >)
-}
+const DetailsSoon = styled.div`
+  font-size: 60px;
+  font weight: 400;
+  text-align: center;
+  color: aquamarine;
+  `
+
+export default () => (
+  <DetailsSoon>Coming Soon</DetailsSoon>
+)

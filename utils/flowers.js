@@ -1,1 +1,1 @@
-import fetchFlowersForColors from '../actions/flowers'
+// Photos File Coming Soon

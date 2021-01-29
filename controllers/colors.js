@@ -24,6 +24,6 @@ export const getColorByName = async (request, response) => {
       ? response.send(color)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve hero, please try again')
+    return response.status(500).send('Unable to retrieve color, please try again')
   }
 }
