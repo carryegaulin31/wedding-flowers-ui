@@ -15,7 +15,7 @@ const connection = new Sequelize(config.database, config.username, config.passwo
 const Colors = ColorsModel(connection, Sequelize)
 const Seasons = SeasonsModel(connection, Sequelize)
 const Flowers = FlowersModel(connection, Sequelize, Seasons)
-const FlowersColors = FlowersColorsModel(connection, Sequelize, Colors, Flowers)
+const FlowersColors = FlowersColorsModel(connection, Sequelize, Flowers, Colors)
 
 Flowers.belongsTo(Seasons)
 Seasons.hasMany(Flowers)
@@ -23,9 +23,9 @@ Colors.belongsToMany(Flowers, { through: FlowersColors })
 Flowers.belongsToMany(Colors, { through: FlowersColors })
 
 export default {
-  Colors,
-  Seasons,
   Flowers,
+  Seasons,
+  Colors,
   FlowersColors,
   Op: Sequelize.Op,
   Sequelize,

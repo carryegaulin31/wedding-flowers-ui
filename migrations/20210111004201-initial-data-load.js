@@ -1,11 +1,5 @@
 module.exports = {
   up: async (queryInterface) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable'users', { id: Sequelize.INTEGER } },
-     */
     await queryInterface.bulkInsert('colors', [
       { name: 'Antique Lavender' },
       { name: 'Antique Pink' },
@@ -154,7 +148,6 @@ module.exports = {
       { name: 'Yellow/Black' },
       { name: 'Yellow/Pink' },
       { name: 'Yellow/Purple' },
-      { name: 'Zero Fucks Given' },
     ])
 
     await queryInterface.bulkInsert('seasons', [
@@ -766,7 +759,7 @@ module.exports = {
       { flowerId: 200, colorId: 55 },
       { flowerId: 201, colorId: 109 },
       { flowerId: 202, colorId: 115 },
-      { flowerId: 203, colorId: 155 },
+      { flowerId: 203, colorId: 115 },
       { flowerId: 204, colorId: 60 },
       { flowerId: 205, colorId: 137 },
       { flowerId: 206, colorId: 115 },
@@ -802,7 +795,7 @@ module.exports = {
       { flowerId: 236, colorId: 18 },
       { flowerId: 237, colorId: 137 },
       { flowerId: 238, colorId: 76 },
-      { flowerId: 230, colorId: 137 },
+      { flowerId: 239, colorId: 137 },
       { flowerId: 240, colorId: 144 },
       { flowerId: 241, colorId: 60 },
       { flowerId: 242, colorId: 63 },
@@ -954,12 +947,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable'users' },
-     */
     await queryInterface.bulkDelete('flowersColors')
 
     await queryInterface.bulkDelete('flowers')
