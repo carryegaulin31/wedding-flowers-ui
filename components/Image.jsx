@@ -11,5 +11,5 @@ const Img = styled.img`
 `
 export default () => (
 
-  <Img src="../public/lilacs.jpg" alt="lilacs" />
+  <Img src="lilacs.jpg" alt="lilacs" />
 )
