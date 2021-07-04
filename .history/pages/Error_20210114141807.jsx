@@ -6,6 +6,6 @@ import Title from '../components/Title'
 export default () => (
   <Page>
     <Title />
-    <NotFound message="Sorry,I am unable to find the page you are looking for" />
+    <NotFound message="Sorry beautiful, I am unable to find the page you are looking for" />
   </Page>
 )

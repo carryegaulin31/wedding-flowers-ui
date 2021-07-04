@@ -7,7 +7,7 @@ const Link = styled(NavLink)`
   font-weight: 400;
   margin: 20px 0;
   text-align: center;
-  color: magenta;
+  color: DarkTurquoise;
   font-style: italic;
 `
 
