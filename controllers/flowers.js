@@ -10,16 +10,27 @@ export const getAllFlowers = async (request, response) => {
 
 export const getFlowerByName = async (request, response) => {
   try {
-    const { name } = request.params
+    const { id } = request.params
 
     const flower = await models.Flowers.findAll({
+      attributes: ['name', 'seasonId', 'slug'],
+      through: { attributes: [] },
       where: {
         [models.Sequelize.Op.or]: [
-          { name },
-          { name: { [models.Sequelize.Op.like]: `%${name}%` } },
+          { id },
+          { name: { [models.Sequelize.Op.like]: `%${id}%` } },
         ],
       },
-      include: [{ model: models.Colors }, { model: models.Seasons }],
+      include: [{
+        attributes: ['name'],
+        model: models.Colors,
+        through: { attributes: [] },
+      }],
+    },
+    {
+      attributes: ['season'],
+      model: models.Seasons,
+      through: { attributes: [] },
     })
 
     return flower

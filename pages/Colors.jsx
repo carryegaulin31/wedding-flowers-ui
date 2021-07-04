@@ -28,12 +28,14 @@ export default () => {
   }, [searchTerm])
 
   return (
-    <Page>
-      <Title />
-      <Search term={searchTerm} setter={setSearchTerm} />
-      {
-        filteredColorList.map(color => (<ColorLink key={color.id} id={color.id} name={color.name} path="colors" />))
-      }
-    </Page>
+    <main>
+      <Page>
+        <Title />
+        <Search term={searchTerm} setter={setSearchTerm} />
+        {
+          filteredColorList.map(color => (<ColorLink key={color.id} id={color.id} name={color.name} path="colors" />))
+        }
+      </Page>
+    </main>
   )
 }

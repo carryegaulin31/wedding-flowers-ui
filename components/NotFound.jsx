@@ -5,6 +5,7 @@ const Icon = styled.div`
   font-size: 36px;
   margin: 20px 0;
   text-align: center;
+  color: yellow;
 `
 
 const Message = styled.div`

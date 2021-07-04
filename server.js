@@ -13,10 +13,10 @@ app.get('/api/seasons', getAllSeasons)
 app.get('/api/seasons/:season', getSeasonByName)
 
 app.get('/api/colors', getAllColors)
-app.get('/api/colors/:id', getColorByName)
+app.get('/api/colors/:identifier', getColorByName)
 
 app.get('/api/flowers', getAllFlowers)
-app.get('/api/flowers/:name', getFlowerByName)
+app.get('/api/flowers/:id', getFlowerByName)
 app.post('/api/flowers', bodyParser.json(), saveNewFlower)
 app.delete('/api/flowers', deleteFlower)
 

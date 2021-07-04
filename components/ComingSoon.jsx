@@ -5,7 +5,7 @@ const ComingSoon = styled.div`
 font-size: 60px;
   font weight: 400;
   text-align: center;
-  color: aquamarine;
+  color: aqua;
   font-style: italic;
   `
 

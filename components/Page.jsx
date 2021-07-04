@@ -5,8 +5,9 @@ import styled from 'styled-components'
 const Page = styled.div`
   margin: 60px auto 0;
   text-align: center;
-  width: 70%;
-  background-color: floralwhite;
+  width: 100%;
+  background-image:url("../lilacs.jpg");
+  background-image: no-repeat scroll center top; 
 `
 
 export default ({ children }) => (

@@ -9,15 +9,16 @@ export const getAllColors = async (request, response) => {
 
 export const getColorByName = async (request, response) => {
   try {
-    const { id } = request.params
+    const { identifier } = request.params
 
-    const color = await models.Colors.findOne({
+    const color = await models.Colors.findAll({
       where: {
-        id,
+        [models.Sequelize.Op.or]: [
+          { id: identifier },
+          { name: { [models.Sequelize.Op.like]: `%${identifier}%` } },
+        ],
       },
-      include: [{
-        model: models.Flowers,
-      }],
+      include: [{ model: models.Flowers }],
     })
 
     return color
